@@ -181,8 +181,6 @@ const changeAndRemovePropsNode = (
     </div>
 );
 
-console.log(typeof Object.keys(addPropsNode.children[0].props)[0]);
-
 const rootElement = document.getElementById("root");
 rootElement.appendChild(createElement(initDOM));
 
