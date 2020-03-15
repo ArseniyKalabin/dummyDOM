@@ -1,0 +1,12 @@
+body {
+  padding: 30px;
+  font: 16px sans-serif;
+}
+
+.disProp {
+  color: #00ff00;
+}
+
+.notDisPropAnymore {
+  color: red;
+}
