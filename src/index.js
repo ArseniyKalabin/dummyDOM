@@ -18,6 +18,7 @@ function createElement(node) {
 function updateElement(root, nextState, currentState) {
     if (nextState === currentState) {
         root.childNodes[0].replaceWith(createElement(nextState));
+        return;
     }
     let batch = notSoDeepDiff(nextState, currentState);
     console.log(batch);
