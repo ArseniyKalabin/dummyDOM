@@ -112,7 +112,8 @@ function executeBatch(realDOM, batch) {
                     console.log('Something wrong with node patch:');
                     console.log(batch[i].patch);
             }
-        } else if (batch[i].children.length) {
+        }
+        if (batch[i].children.length) {
             executeBatch(realDOM.childNodes[i], batch[i].children);
         }
     }
@@ -157,7 +158,7 @@ const changeNode = (
 
 const replaceNode = (
     <div>
-        <span>this is SPAN</span>
+        <span>This is SPAN!</span>
         <ul>
             <li>How is it going?</li>
         </ul>
@@ -166,7 +167,7 @@ const replaceNode = (
 
 const addPropsNode = (
     <div>
-        <span class="disProp" another="datProp">Hi!</span>
+        <span class="disProp" another="datProp">This is SPAN!</span>
         <ul>
             <li>How is it going?</li>
         </ul>
@@ -175,7 +176,7 @@ const addPropsNode = (
     ;
 const changeAndRemovePropsNode = (
     <div>
-        <span class="notDisPropAnymore">Hi!</span>
+        <span class="notDisPropAnymore">This is SPAN!</span>
         <ul>
             <li>How is it going?</li>
         </ul>
